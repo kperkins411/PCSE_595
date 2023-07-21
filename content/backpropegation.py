@@ -16,14 +16,16 @@ correct = 6 #known as the 'ground truth'
 
 #initial weights,
 # (this is a non trivial decision, the frameworks, PyTorch, Tensorflow, etc,  provide options)
-w1=0.2
-w2=0.3
+# different initializtions (try reversing values below and see what w1 and w2 converge to)
+# result in different answers, but they all result in minimized errors
+w2=0.001
+w1=5
 
 out1= (x*w1 + y*w2)             #neuron output
 error = 1/2*(correct-out1)**2   #error function (want this to shrink to 0!)
 
-dout1_dw1 = x  # constant derivative
-dout1_dw2 = y  # constant derivative
+dout1_dw1 = -x  # constant derivative
+dout1_dw2 = -y  # constant derivative
 
 #how much of dwerror_w to add to w
 #another non trivial bit, .01, .001 .0001?  Use learning rate finding algorithm
@@ -32,7 +34,7 @@ learning_rate = .01
 
 #usually you train on batches of your data until you have trained on it all, this is called an epoch
 #then you train for several more epochs until you get a low enough error
-for i in range(10000):
+for i in range(100):
 
     # forward pass
     out1 = (x * w1 + y * w2)
@@ -41,14 +43,13 @@ for i in range(10000):
     print(f"For pass {i}, w1 ={w1}, w2={w2}, error is{error}")
 
     # backward pass derivitives (dout1_dw1 dout1_dw2 defined above)
-    derror_dout1 = -(correct - out1)
+    derror_dout1 = (correct - out1)
 
     # chain rule
-    derror_dw1 = -derror_dout1 * dout1_dw1  # shows fastest increase, want decrease, reverse sign
-    derror_dw2 = -derror_dout1 * dout1_dw2
+    derror_dw1 = derror_dout1 * dout1_dw1  # shows fastest increase, want decrease, reverse sign
+    derror_dw2 = derror_dout1 * dout1_dw2
 
-    #adjust weights
-    w1 = w1+learning_rate * derror_dw1;
-    w2 = w2+learning_rate * derror_dw2;
-
-
+    #adjust weights by subtracting a little bit of derivitive
+    #this results in an Out1 that is closer to correct
+    w1 = w1-learning_rate * derror_dw1;
+    w2 = w2-learning_rate * derror_dw2;

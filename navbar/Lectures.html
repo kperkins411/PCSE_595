@@ -31,31 +31,55 @@
 			<td class="style_white "><em>1</em></td>
 
 			<td class="style_white ">
-			<strong>Paperspace Gradient Machine Setup</strong><br>
-			
-			</ul>
-			<strong>Quick Reference</strong><br>
-		
-		   <br><strong>READINGS-Linux and Git tutorials</strong><br>	
-		   <strong><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Linux tutorial</a></strong><br/>
-			<strong><a href="http://rogerdudler.github.io/git-guide/">Git - the simple guide</a></strong><br/>
+			<strong>Part1: Automate setup of a cloud based GPU instance</strong><br><br>
+			<br><strong>Slides and Videos</strong><br>
+				
+ 				<strong><a href="https://github.com/CNUClasses/CPSC327/blob/master/content/Lectures/Setting_up_cloud_machine.pdf"> 
+					INTRODUCTION:Setting up a cloud machine</a> Introduction</a></strong><br>
+				<strong><a href="">VIDEO: DETAILED MACHINE INSTANCE SETUP INSTRUCTIONS:Setting up a cloud machine</a></strong> VIDEO: Creating, customizing and automating setup of a paperspace gradient instance.  Watch this for how to do most of the project.</a></strong><br><br>
 
-		
-			<br><strong>SLides and Videos</strong><br>
- 				<strong><a href="https://github.com/CNUClasses/CPSC327/blob/master/content/Lectures/1_Syllabus_and_Intro.pdf"> Syllabus and Intro </a></strong><br>
-				<strong><a href="https://github.com/CNUClasses/CPSC327/blob/master/content/Lectures/1_Java_is_different_from_Cplusplus.pdf" style="color: #cc0000"> Some differences between Java and C++</a></strong> Java was developed after C++ had been in use for years.  It's designers kept what worked well in C++ and fixed what didn't. <br>
-				<strong><a href="https://github.com/CNUClasses/CPSC327/blob/master/content/Lectures/1_1_Linux_and_Git.pdf">Git and Linux demo notes </a></strong><br>
+				
+			<strong>References</strong><br>
+				<strong><a href="https://course.fast.ai/">Fastai-Practical Deep Learning for Coders</a></strong>The next 2 weeks content derives from fastai<br/>
+				<!-- <strong><a href="https://www.youtube.com/watch?v=V3cN-bqFUh4&list=PLfYUBJiXbdtSLBPJ1GMx-sQWf6iNhb8mM&index=6"> VIDEO: Fastai code walkthru for creating a paperspace gradient instance</a> -->
 
+				<strong><a href="https://www.paperspace.com/">Paperspace</a></strong> Fast, simple, scalable cloud computing for AI developers</strong><br/>
+				<strong><a href="https://linuxconfig.org/vim-tutorial">vim</a></strong> a powerful editor available on all unix installs</strong><br/>
+				<strong><a href="">vim cheatsheet</a></strong> annotated list of useful commands<br/>
+				<strong><a href="https://github.com/universal-ctags/ctags">universal ctags</a></strong> ctags generates an index (or tag) file of language objects found in source files for programming languages. This index makes it easy for text editors and other tools to locate the indexed items.  See the 'How to build and install' section.</strong><br/>
+				<strong><a href="https://devhints.io/bash">bash scripting</a></strong> list of useful commands</strong><br/>
+				<strong><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Linux tutorial</a></strong><br/>
+				<strong><a href="http://rogerdudler.github.io/git-guide/">Git - the simple guide</a></strong><br/>		
 			<td class="style_white ">
-			
-
 			</td>
 		</tr>
 		<tr>
 			<td class="style_white "><em>2</em></td>
 			<td class="style_white ">
+				<strong>Part 2: Effectively using a cloud based GPU instance for deep learning.  </strong><br>Specifically to enter a Kaggle competition<br>
+
+				<br><strong>Slides and Videos</strong><br>
+				<strong><a href="https://github.com/CNUClasses/CPSC327/blob/master/content/Lectures/DeepLearningComputerVisionIntro.pdf"> Deep Learning for Computer Vision</a> </a></strong><br>
+				<strong><a href="">VIDEO: EFFECTIVE USE</a></strong> Entering a Kaggle image recognition datascience competition.  Setting up Kaggle cli, getting data, training models, submitting results, monitoring memory...
+				Watch this for how to compete in a Kaggle datascience competition</a></strong><br><br>
+
+			<strong>References</strong><br>
+			<strong><a href="https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning">The best vision models for fine-tuning</a></strong> How to choose a model? This notebook compares many different models.  All are fine-tuned on two differnt datasets;  
+				<a href="https://www.robots.ox.ac.uk/~vgg/data/pets/"> Oxford IIT-Pet</a> and then <a href="https://www.kaggle.com/c/planet-understanding-the-amazon-from-space/data">Kaggle planet (space images)</a>.<br>
+				<mark>Choose a model with a low error rate and fit time (trains faster) that's trained on data similar to yours.</mark><br>
+				 For instance, if you want to build a dogs verses cats classifier, then choose a model that performed well when fine tuned on <a href="https://www.robots.ox.ac.uk/~vgg/data/pets/"> Oxford IIT-Pet</a>.<br><br>
+			<strong><a href="https://www.kaggle.com/docs/api">Kaggle CLI (command line interface)</a></strong>How to programatically interact with Kaggle (get/browse datasets and competitions and submit results)<br>
+			BTW- you need to have an API key in order to use the CLI, to get one:<br>
+			Scroll to the API section in your Account settings and click the Create New API Token button.<br>
+			Kaggle will generate a JSON file named kaggle.json and prompt you to save the file to your computer.<br>
+			Put this file in the ~/.kaggle directory on your machine, make sure its only readable by you (chmod 600 /root/.kaggle/kaggle.json)<br>
+			BTW you are probably going to use this again and again, its a good idea to put it in /storage/cfg then symlink it in setup.sh<br>
+			The CLI looks in this place for your key.<br>
+				
 	            </td>
 			<td class="style_white ">
+				<strong><a href="https://github.com/kperkins411/PCSE_595_code/blob/master/kaggle_paddy.ipynb">'Paddy Doctor: Paddy Disease Classification'</a></strong>Kaggle competition notebook, used to demo using a remote paperspace cloud GPU server.<br>
+
 			</td>
 		</tr>
 

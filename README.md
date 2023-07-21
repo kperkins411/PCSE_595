@@ -1,6 +1,6 @@
-# CPSC327
-C++
+# PCSE 698 
+Setting up a Paperspace machine and using Fastai for simple object recognition
 
-This is a github page.  Please go to https://cnuclasses.github.io/CPSC327/ to see it as a webpage.
+This is a github page.  Please go to https://kperkins411.github.io/PCSE_698/ to see it as a webpage.
 
 Note: the content folder is course content, anything above it is HTML page display.  Spend most of your time in navbar/lectures and navbar/projects
