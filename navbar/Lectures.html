@@ -42,9 +42,12 @@
 
 			<td class="style_white ">
 			<strong>Part1: Automate setup of a cloud based GPU instance</strong><br>
-			Cloud based machines usually start with a default configuration which you have to customize to purpose every time you start the machine. 
-			This unit covers creating a startup script to do this automatically.<br>
-			To that end we will cover a good bit of linux, some ‘in the weeds’ python install details, a bit of bash shell scripting and using vim and ctags to browse code bases.  The lectures are practical in that I will walk thru this process explaining every step.<BR>
+			Cloud based machines tend to start with a minimal configuration.  
+			To be useful they need extensive changes that are tedious and time consuming to set up (aliases, installing software, configuration files, 
+			creating debugging environments etc).  One problem is that once the machine shuts down, all of these changes are lost, which means the whole process 
+			is repeated the next time the its started.
+
+			This unit covers creating a startup script to automate this process.<br> The lectures are practical in that I will walk thru this process explaining every step.<BR>
 			<br>
 			<strong>Before class</strong><br>
 			1. Sign up for a <a href="https://www.paperspace.com/">Paperspace</a> account.  The free account option is fine, but a Pro account ($8 USD/month) will give you more GPU options. You can cancel anytime. <br>
