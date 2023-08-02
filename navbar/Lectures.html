@@ -75,13 +75,16 @@
 		<tr>
 			<td class="style_white "><em>2</em></td>
 			<td class="style_white ">
-				<strong>Part 2: Effectively using a cloud based GPU instance for a Data Science competition.  </strong><br>Specifically to enter a Kaggle competition<br>
+				<strong>Part 2: Effectively using a cloud based GPU instance for a Data Science competition.  </strong><br>
+				Specifically to enter a Kaggle competition<br>
+
+				Note: I'll touch on back propagation, learning rate( consequences when too large or small), how to choose a timm vision model, how to fine tune this model, model training, model evaluation, submiting to a competition.  
+				I will also go over GPU monitoring using nvidia-smi, how to reclaim memory (gc and clearing torch cache).
 
 				<br><strong>Slides and Videos</strong><br>
-				<strong><a href="https://kperkins411.github.io/PCSE_595/content/content/Lectures/DeepLearningComputerVisionIntro.pdf"> INTRODUCTION: Deep Learning for Computer Vision</a> </a></strong><br>
-<!--				<strong><a href="">VIDEO: Deep Learning Computer Vision Intro</a></strong> Deep Larning intro, back propagation intuitions, How to choose a model, fastai intro <br>
-				<strong><a href="">VIDEO: Kaggle competition entry</a></strong> Setting up Kaggle cli, getting data from Kaggle, choose then train a model, submitting results, monitoring memory
-				<br><br>
+				<strong><a href="https://kperkins411.github.io/PCSE_595/content/content/DeepLearningComputerVisionIntro.pdf"> INTRODUCTION: Deep Learning for Computer Vision</a> </a></strong><br>
+				<strong><a href="https://youtu.be/1phvYIBK1RI">VIDEO: Deep Learning Computer Vision Intro</a></strong> Deep Learning intro, back propagation intuitions, How to choose a model, fastai intro,Kaggle competition into, Kaggle CLI, pulling data from Kaggle via CLI, setting up kaggle.json auth token <br> -->
+<!--			<strong><a href="">VIDEO: Kaggle competition entry</a></strong>  Choose then train a model, submitting results, monitoring memory<br><br>
 -->
 			<strong>References</strong><br>
 			<strong><a href="https://www.kaggle.com/competitions/paddy-disease-classification">Paddy Doctor: Paddy Disease Classification</a></strong>Kaggle competition: Identify the type of disease present in paddy leaf images<br> 
@@ -97,7 +100,7 @@
 			BTW you are probably going to use this again and again, its a good idea to put it in /storage/cfg then symlink it in setup.sh<br>
 			The CLI looks in this place for your key.<br>
 				
-			
+
 	            </td>
 			<td class="style_white ">
 				<strong><a href="https://github.com/kperkins411/PCSE_595_code/blob/master/Backpropdemo.ipynb">Backpropagation demo</a></strong>A very simple demo using 1 neuron and 1 error function. Also demonstrates what happens with a learning rate thats too high<br>
